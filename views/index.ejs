@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <title>Subtitle Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h4>Welcome to Subtitle Generator!</h4>
+      <h1>Upload Video</h1>
+      <div class="loader" style="display: none">Loading...</div>
+      <h2><%= locals.message || '' %></h2>
+
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <div class="file-field input-field">
+          <div class="btn grey">
+            <span>Select Video</span>
+            <input name="inputVideo" type="file" accept="video/*" required />
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" />
+          </div>
+        </div>
+        <div class="file-field input-field">
+          <div class="btn grey">
+            <span>Select Subtitles</span>
+            <input name="inputSubtitles" type="file" accept=".srt" required />
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" />
+          </div>
+        </div>
+        <button type="submit" class="btn">Upload</button>
+      </form>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>

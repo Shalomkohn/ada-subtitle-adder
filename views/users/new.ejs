@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Express App</title>
+  </head>
+  <body>
+    <form action="/users" method="POST">
+      <label
+        >First Name
+        <input
+          type="text"
+          name="firstName"
+          value="<%= locals.firstName || 'Nothing to show' %>"
+        />
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
