@@ -2,6 +2,9 @@
   "name": "real",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "engines": "14.x"
+  },
   "scripts": {
     "start": "node index",
     "dev": "nodemon index"
